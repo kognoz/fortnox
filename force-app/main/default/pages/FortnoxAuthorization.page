@@ -1,0 +1,32 @@
+<apex:page controller="FortnoxAuthComController">
+    <apex:slds />
+    <apex:form id="theForm" >
+        <apex:pageblock >
+        <apex:pageMessages ></apex:pageMessages>
+        <apex:actionstatus id="statusAuthFortnox">
+        <apex:facet name="start">
+            <div class="waitingSearchDiv" id="el_loading" style="background-color: #fbfbfb; height:100%;opacity:0.65;width:100%;">
+                <div class="waitingHolder" style="top: 100px; width: 91px;">
+                    <img class="waitingImage" src="/img/loading.gif" title="Please Wait..." />
+                <span class="waitingDescription">Loading...</span>
+                </div>
+            </div>
+        </apex:facet>
+        </apex:actionstatus>
+        <apex:pageBlockButtons location="top">
+            <apex:commandButton action="{!authorizeFortnox}" value="Authorize with Fortnox" />
+            <apex:commandButton action="{!fetchAccessToken}" value="Complete Authorzation" status="statusAuthFortnox" reRender="theForm" />
+            <apex:commandButton action="{!renewAccessToken}" value="Get Access Token" status="statusAuthFortnox" reRender="theForm" />
+        </apex:pageBlockButtons>
+        </apex:pageblock>
+
+
+        <textarea cols="50" rows="30" maxlength="10" style="margin-top:50px; margin-left:50px;margin-right:600px;">
+            {!accessToken}
+        </textarea>
+
+    </apex:form>
+
+
+
+</apex:page>

@@ -1,13 +1,28 @@
 {
-  "orgName": "fernando company",
+  "orgName": "Fortnox Integration",
   "edition": "Developer",
-  "features": ["EnableSetPasswordInApi"],
+  "features": [
+    "EnableSetPasswordInApi", 
+    "Communities", 
+    "ContactsToMultipleAccounts", 
+    "CustomNotificationType", 
+    "DefaultWorkflowUser",
+    "FlowSites",
+    "MultiCurrency",
+    "ProcessBuilder",
+    "ProductsAndSchedules",
+    "RecordTypes",
+    "Sites",
+    "Workflow"],
   "settings": {
     "lightningExperienceSettings": {
       "enableS1DesktopEnabled": true
     },
     "mobileSettings": {
       "enableS1EncryptedStoragePref2": false
+    },
+    "communitiesSettings":{
+      "enableNetworksEnabled":true
     }
   }
 }
